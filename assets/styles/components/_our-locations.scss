@@ -1,0 +1,215 @@
+#our-locations {
+	background-color: #fff;
+	padding: 2em .5em;
+	text-align: center;
+	.location-tabs {
+		.location-helper {
+			color: $body;
+			font-style: italic;
+		}
+		.dropdown-toggle {
+		    background-color: transparent;
+		    border: none;
+		    border-radius: 0;
+		    border-bottom: 1px solid $brand-primary;
+		    color: $brand-secondary;
+		    display: block;
+		    margin: 10px auto 0;
+		    position: relative;
+		    padding: 15px;
+		    text-align: left;
+		    width: 100%;
+		    z-index: 2;
+		    &:after {
+		    	position: absolute;
+    			right: 10px;
+		    }
+		    &:focus {
+		    	outline: 0;
+		    	box-shadow: none;
+		    }
+		}
+		.nav-tabs {
+			overflow: hidden;
+			display: block;
+			transition: max-height 0.3s linear;
+			border: none;
+    		width: 100%;
+		    top: -3px;
+		    position: relative;
+		    margin: 0 auto;
+		    z-index: 1;
+		    text-align: left;
+		    max-height: 0px;
+	    	.nav-item {
+	    		display: block;
+	    		.nav-link {
+	    			text-transform: uppercase;
+	    			border: none;
+	    			color: $brand-secondary;
+				    font-weight: bold;
+				    font-size: 0.75rem;
+				    padding: 1.5em 1.25em;
+				    letter-spacing: .08em;
+	    			&.active {
+	    				display: none;
+	    				border: none;
+	    				background-color: transparent;
+	    			}
+	    			&:hover {
+	    				border: none;
+	    			}
+	    		}
+	    	}
+		}
+		.tab-content {
+			.tab-pane {
+				.tab-column {
+					margin-top: 40px;
+					h3 {
+						font-size: 1.25rem;
+						line-height: 1.4em;
+					}
+					p {
+						font-size: 0.875rem;
+						line-height: 1.7em;
+						color: $body;
+					}
+					ul {
+						list-style: none;
+					    padding: 0;
+					    margin-top: 2em;
+					    li {
+					    	color: $body;
+					    	font-size: 0.875em;
+    						line-height: 1.7em;
+    						margin: .25em 0;
+					    }
+					    &.social-icons {
+							margin-top: .5em;
+							justify-content: center;
+					    	li {
+					    		display: inline-block;
+								margin: 0 .5em;
+								width: auto;
+					    	}
+					    }
+					}
+					.btn {
+						margin-top: 2em;
+					}
+				}
+			}
+		}
+		&.show {
+			.nav-tabs {
+				max-height: 200px;
+			}
+		}
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+	#our-locations {
+		text-align: center;
+		h2 {
+			margin-bottom: 1em;
+		}
+		.location-tabs {
+			.dropdown-toggle {
+				display: none;
+				visibility: hidden;
+				opacity: 0;
+			}
+			.nav-tabs {
+				display: flex;
+                max-height: 200px;
+                margin-bottom: 2em;
+                width: 100%;
+                max-width: 800px;
+                flex-wrap: wrap;
+                justify-content: center;
+				.nav-item {
+					display: inline-block;
+                    text-align: center;
+                    width: auto;
+                    margin-right: 20px;
+					.nav-link {
+						font-weight: normal;
+                        padding: 1.25em .15em .5em .15em;
+                        position: relative;
+						&.active {
+							display: inline-block;
+							border: none;
+							font-weight: 900;
+							position: relative;
+							&:after {
+								content: '';
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								width: 100%;
+								height: 3px;
+								background-color: $brand-secondary;
+							}
+						}
+						&:hover {
+							// font-weight: 900;
+						}
+					}
+				}
+			}
+			.tab-content {
+				.tab-pane {
+					text-align: left;
+					.tab-column {
+						p {
+							margin-top: .1em;
+						}
+						ul {
+							margin-top: .1em;
+							&.social-icons {
+								justify-content: left;
+								margin: 0;
+								li {
+									margin: 0 1em 0 0;
+								}
+							}
+						}
+						.btn {
+							width: 100%;
+							padding: 1em 2%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+	#our-locations {
+		.location-tabs {
+			.nav-tabs {
+				width: 60%
+			}
+			.tab-content {
+				.tab-pane {
+					padding: 0 4em;
+					.tab-column {
+						h3 {
+							font-size: 1.5rem;
+						}
+						.btn {
+							width: auto;
+							padding: 1em 2.5em;
+						}
+					}
+				}
+			}
+		}	
+	}
+}

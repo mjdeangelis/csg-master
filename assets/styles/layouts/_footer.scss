@@ -1,0 +1,207 @@
+#footer {
+	&.landing-page {
+		background-color: $section-offset;
+	}
+
+	padding: 0;
+	text-align: center;
+
+	.footer-top {
+		display: flex;
+		flex-direction: column;
+		padding: 1em 0 2em;
+
+		.footer-box {
+			width: 100%;
+			margin-top: 2em;
+		}
+
+		.footer-list {
+			list-style: none;
+			padding: 0;
+			margin-top: 2em;
+
+			li {
+				color: $body;
+				line-height: 1.7em;
+			}
+		}
+
+		a {
+			color: $body;
+		}
+
+		a:hover {
+			color: $body;
+		}
+
+		.btn-dark {
+			color: $btn-dark;
+		}
+
+		.btn-dark:hover {
+			color: $btn-dark;
+		}
+
+	}
+	.footer-bottom {
+		/* Manus Change */
+		background-color: #fff;
+		margin-top: 0;
+    	padding-top: 0;
+		/* background-color: $section-offset; 
+		margin-top: 2em;
+		padding: 1em 0; */
+		color: $footer-link;
+		
+			.copyright {
+				color: $footer-link;
+				display: inline-block;
+				font-size: 0.75rem;
+				font-weight: 600;
+				line-height: 2em;
+				margin: .5em 0;
+				text-align: center;
+				opacity: .65;
+			}
+
+			.copyright-links {
+				width: 100%;
+				text-align: center;
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				li {
+					display: inline-block;
+					font-size: 0.75rem;
+					width: 33%;
+
+					a {
+						color: $footer-link;
+						display: inline-block;
+						font-size: 0.75rem;
+						font-weight: 600;
+						line-height: 2em;
+						opacity: .65;
+					}
+				}
+
+				.copyright-border {
+					border-left: 1px solid $footer-link;
+				    border-right: 1px solid $footer-link;
+				    padding: 0 20px;
+				    padding: 0 15px;
+    				margin: 0 -5px;
+				}
+
+			}
+
+			.social-icons {
+
+				li {
+					width: 33%;
+				}
+
+			}
+		
+	}
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+    #footer {
+        padding: 1em 0 0;
+        text-align: left;
+    
+        .footer-top {
+            padding: 1em 4em;
+        }
+        .footer-bottom {
+            
+            .footer-left {
+                .copyright-links {
+                    li {
+                        text-align: left;
+    
+                        .copyright-border {
+                            padding: 0px 10px;
+                            margin: 0 -20px;
+                        }
+    
+                    }
+                    
+                }
+            }
+            .footer-right {
+    
+                .social-icons {
+                    width: 35%;
+                    float: right;
+                }
+            }
+        }
+    
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+    #footer {
+
+        .footer-top{
+            padding: 2em 4em;
+        }
+        .footer-bottom {
+    
+            .footer-left {
+                width: 75%;
+            }
+            .footer-right {
+    
+                .copyright-links {
+                    float: right;
+                    margin: .5em 0;
+                }
+    
+                .social-icons {
+    
+                }
+            }
+        }
+    
+    }
+}
+ 
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 75em) { 
+    #footer {
+
+        .footer-top{
+            .footer-box {
+                .btn-dark {
+                    margin-top: 3em;
+                }
+            }
+        }
+        .footer-bottom {
+    
+            .footer-left {
+                width: 65%;
+            }
+            .footer-right {
+    
+                .copyright-links {
+                    width: 60%;
+                }
+                .social-icons {
+                    width: 25%;
+                }
+            }
+        }
+    
+    }
+}

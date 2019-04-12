@@ -1,0 +1,329 @@
+.top-office {
+	display: block;
+	opacity: 1;
+	color: $nav-link;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 1.3em;
+	margin: .05em 0 .5em;
+	text-transform: uppercase;
+	text-align: right;
+	.location {
+		display: inline-block;
+		font-weight: 900;
+		width: 100%;
+	}
+	a {
+		opacity: 1;
+		color: $brand-primary;
+		font-size: 1.1em;
+		font-weight: 700;
+		letter-spacing: 1px;
+		line-height: 1.3em;
+	}
+}
+#top-bar {
+	padding: 5px 0;
+	&.top-bar--listLocations {
+		text-align: center;
+		display: flex;
+        .container {
+			padding: 5px 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+		.top-bar-col {
+			width: 100%;
+			display: flex;
+			align-items: flex-end;
+			align-content: flex-end;
+			justify-content: flex-end;
+		}
+		.top-office {
+			display: inline-block;
+			width: 50%;
+			opacity: 1;
+			color: $nav-link;
+			float: left;
+			font-size: 0.5rem;
+			letter-spacing: 1px;
+			line-height: 1.3em;
+			margin: .05em 0 .5em;
+			padding: 0 12px;
+			a {
+				font-size: 0.5rem;
+			}
+		}
+	}
+	&.top-bar--multipleLocations {
+		display: none;
+		text-align: right;
+		.dropdown-toggle {
+			background-color: transparent;
+			border: none;
+			border-radius: 0;
+			color: $body-dark;
+			margin: 10px auto 0;
+			position: relative;
+			padding: 0 0 0 15px;
+			text-align: right;
+			z-index: 2;
+			outline: none;
+			text-align: right;
+			box-shadow: none;
+		}
+		.nav-tabs {
+			overflow: hidden;
+			background-color: $brand-secondary;
+			display: block;
+			position: absolute;
+			max-height: 0;
+			top: 120%;
+			right: 0;
+			box-shadow: 0 6px 39px 0 rgba(73,73,73,.47);
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			padding: 1.25em 0;
+			margin: 0;
+			border: none;
+			opacity: 0;
+			-webkit-transform: translateY(-5px) scale(.85);
+			transform: translateY(-5px) scale(.85);
+			transition: opacity .3s,left .3s,top .3s,-webkit-transform .3s ease-out;
+			transition: transform .3s ease-out,opacity .3s,left .3s,top .3s;
+			transition: transform .3s ease-out,opacity .3s,left .3s,top .3s,-webkit-transform .3s ease-out;
+			z-index: 10000;
+			min-width: 250px;
+			text-align: left;
+			visibility: hidden;
+			.nav-item {
+				display: block;
+				border: none;
+				text-align: left;
+				white-space: nowrap;
+				margin: 0;
+				padding: 0 1.25em;
+				width: 100%;
+				.nav-link {
+					text-transform: uppercase;
+					border: none;
+					border-radius: 0;
+					color: #fff;
+					font-weight: 700;
+					font-size: .75rem;
+					padding: 1em 1.25em;
+					letter-spacing: .08em;
+
+					&.active {
+						background-color: $brand-secondary;
+					}
+				}
+			}
+		}
+		.tab-content {
+			text-align: right;
+			a {
+				font-style: normal;
+				font-weight: bold;
+				line-height: normal;
+				font-size: 16px;
+				text-align: right;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+		}
+		.show {
+			.nav-tabs {
+				max-height: none;
+				visibility: visible;
+				opacity: 1;
+				-webkit-transform: translate(0) scale(1);
+				transform: translate(0) scale(1);
+			}
+		}
+	}
+}
+.multiple-locations-btn {
+	position: fixed;
+	z-index: 1000;
+
+	.fixed-call {
+		background-color: #9CC038;
+	}
+	
+	input {
+		display: none;
+	}
+
+	input + .menu .fixed-call .fa-times {
+		display: none;
+	}
+
+	input:checked + .menu .fixed-call {
+
+		.fa-phone {
+			display: none;
+		}
+
+		.fa-times {
+			display: inline-block;
+			margin-top: -5px;
+		}
+	}
+
+	input:checked + .menu {
+		box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+		border-radius: 0;
+	}
+
+	.menu {
+		z-index: 1000;
+		width: 200px;
+		height: 200px;
+		background: #FFF;
+		border-radius: 50% 50% 50% 50%;
+		transition: .5s ease-out;
+		box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+		cursor: pointer;
+		position: fixed;
+		right: -200px;
+		bottom: -200px;
+	}
+
+	.menu-content {
+		z-index: 0;
+		position: fixed;
+		top: 45%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: .05s ease-in 0s;
+		text-align: center;
+		width: 100%;
+		visibility: hidden;
+
+		p {
+			color: $body-dark;
+			font-size: 1.125rem;
+			margin-bottom: 30px;
+		}
+
+		a {
+			color: $brand-primary;
+			text-decoration: none;
+			display: inline-block;
+			min-width: 75%;
+		
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+
+			li {
+				margin-bottom: 25px;
+				font-weight: bold;
+				line-height: normal;
+
+				span {
+					color: $body-heading;
+					display: block;
+					font-size: 0.75rem;
+					text-align: center;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+
+	input:checked + .menu .menu-content {
+		opacity: 1;
+		visibility: visible;
+		z-index: 200;
+		transition-delay: .5s;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 36em) {
+	#top-bar {
+		&.top-bar--listLocations {
+			.top-office {
+				width: 25%;
+			}
+		}
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+	#top-bar {
+		&.top-bar--listLocations {
+			.top-office {
+				vertical-align: middle;
+				float: right;
+				width: auto;
+				font-size: 0.6rem;
+				margin: .05em 0 .5em;
+				.location {
+					width: auto;
+					margin-right: 3px;
+				}
+				a {
+					font-size: 0.65rem;
+				}
+				&:not(:last-of-type) {
+					margin-right: 2em;
+				}
+			}
+		}
+		&.top-bar-multipleLocations {
+			display: flex;
+		}
+	}
+	.multiple-locations-btn {
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#top-bar.top-bar--multipleLocations {
+		display: block;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+	#top-bar {
+		&.top-bar--listLocations {
+			.top-office {
+				font-size: 0.75rem;
+				a {
+					font-size: 0.75rem;
+				}
+				&:not(:last-of-type) {
+					margin-right: 3em;
+				}
+			}
+		}
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 75em) {
+    #top-bar {
+		&.top-bar--listLocations {
+            .container {
+                width: 1140px;
+            }
+        }
+    }
+}

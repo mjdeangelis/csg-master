@@ -1,0 +1,85 @@
+.btn {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: transparent;
+	margin: 0 auto;
+	cursor: pointer;
+	width: 75%;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: .08em;
+	line-height: 1.4em;
+    padding: 1.15em 0;
+	border-radius: 3em;
+	border: 1px solid;
+	transition: all 0.1s ease-in-out;
+}
+
+.btn-dark {
+	@extend .btn;
+	color: $btn-dark;
+	background-color: $btn-dark-bg;
+	border: 1px solid $btn-dark-border;
+
+	&:hover {
+		color: $btn-dark;
+		background-color: $btn-dark-bg;
+		border: 1px solid $btn-dark-border;
+		box-shadow: 0 6px 20px 0 rgba(73,73,73,.27);
+		transform: scale(1.05);
+	}
+
+	&:active {
+		color: $btn-dark;
+		background-color: $btn-dark-bg;
+		border: 1px solid $btn-dark-border;
+		box-shadow: none;
+	}
+
+	&:focus {
+		color: $btn-dark;
+		background-color: $btn-dark-bg;
+		border: 1px solid $btn-dark-border;
+		box-shadow: none;
+	}
+}
+
+.btn-light {
+	@extend .btn;
+	color: $btn-light;
+	background-color: $btn-light-bg;
+	border: 1px solid $btn-light-border;
+
+	&:hover {
+		color: $btn-light;
+		background-color: $btn-light-bg;
+		border: 1px solid $btn-light-border;
+		box-shadow: 0 6px 20px 0 rgba(73,73,73,.27);
+		transform: scale(1.05);
+	}
+
+	&:active {
+		color: $btn-light;
+		background-color: $btn-light-bg;
+		border: 1px solid $btn-light-border;
+		box-shadow: none;
+	}
+
+	&:focus {
+		color: $btn-light;
+		background-color: $btn-light-bg;
+		border: 1px solid $btn-light-border;
+		box-shadow: none;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+	.btn {
+		display: inline-block;
+		padding: 1em 2.5em;
+		width: auto;
+		margin: 0 auto;
+	}
+}

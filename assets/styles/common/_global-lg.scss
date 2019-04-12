@@ -1,0 +1,176 @@
+body {
+
+    /* Home page styles */
+        &.home {
+            .wrap.container {
+    
+                .content.row {
+    
+                    .main {
+    
+                    }
+                }
+            }
+        }
+    
+        /* Page Specific Styles */
+        &:not(.home) {
+    
+            .wrap.container {
+    
+    
+            }
+    
+            .main {
+    
+                h1 {
+    
+                }
+    
+                p {
+    
+                }
+    
+                h2 {
+                    font-size: 2rem;
+                }
+    
+                h3 {
+                    font-size: 1.5rem;
+                }
+    
+                ul li {
+    
+                }
+    
+                ul li:before {
+    
+                }
+    
+            }
+            
+        }
+    
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }	
+    
+    h3 {
+        font-size: 2rem;
+    }
+    a {
+    
+    }
+    
+    /* Hero Section */
+    #hero {
+    
+        .hero-container {
+    
+            .hero-headline {
+                font-size: 3.5rem;
+                margin-bottom: .5em;
+            }
+    
+            .hero-subhead {
+                font-size: 1rem;
+                width: 71%;
+            }
+    
+            .hero-author {
+    
+            }
+    
+        }
+        
+    }
+    
+    /* Value Prop Section */
+    #value-prop {
+    
+        .value-prop-container {
+            padding: 3em 0 2em;
+    
+            .value-prop-box {
+                width: 33.3333333333%;
+                padding: 1em 2em;
+    
+                .value-prop-title {
+                    font-size: 1.5rem;
+                }
+    
+                &:before {
+                    width: 90px;
+                    height: 90px;
+                    top: -1.25em;
+                }
+            }
+        }
+    }
+    
+    /* Features Section */
+    #features {
+    
+        .features-container {
+            margin-top: 3.5em;
+        }
+    }
+    
+    /* Office About Section */
+    #office-info {
+        text-align: left;
+    
+        .about-title {
+            margin-top: 2em;
+        }
+        p {
+            padding-right: 1em;
+        }
+    }
+    
+    /* Office About Section */
+    #office-info {
+    
+        .office-offers {
+    
+            .row {
+    
+                .offers-container {
+    
+                    .offer {
+                        margin: 2em 2.6em;
+                    }
+    
+                    
+                }
+            }
+        }
+    }
+    
+    /* Meet the Dentist Section */
+    #meet-the-dentists {
+    
+        .dentists-container {
+            .dentist-box {
+                min-height: 290px;
+                padding: 2em;
+                width: 47%;
+            }
+        }
+    }
+    
+    /* Contact Us Section */
+    #contact-us {
+        padding: 3em .5em;
+    
+    }

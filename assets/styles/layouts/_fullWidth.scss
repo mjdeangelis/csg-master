@@ -1,0 +1,14 @@
+body.page-template-template-fullWidth {
+	.wrap.container {
+		padding: 2em 1em;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+    body.page-template-template-fullWidth {
+        .wrap.container {
+            padding: 4em 1em;
+        }
+    }
+}

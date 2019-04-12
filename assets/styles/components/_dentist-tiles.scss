@@ -1,0 +1,129 @@
+/* Dentist Tiles */
+.our-dentists-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .dentist-tile {
+        width: 100%;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        margin-bottom: 2em;
+
+        a {
+            &:hover {
+                text-decoration: none;
+
+                .tile-circle {
+                    box-shadow: 0 3px 30px rgba(51,65,84,.4);
+                }
+            }
+        }
+        
+        &:nth-child(odd) {
+            // margin-right: 1em;
+        }
+
+        .tile-image {
+            position: relative;
+            margin-bottom: 2em;
+
+            img {
+                max-width: 100%;
+                
+            }
+
+            .tile-circle {
+                background-color: $brand-primary;
+                height: 46px;
+                width: 46px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+                right: 20px;
+                bottom: -23px;
+                transition: all .2s;
+
+                .fa {
+                    color: #fff;
+                    margin-right: 0;
+                }
+            }
+
+            &:hover {
+                .tile-circle {
+                    box-shadow: 0 3px 30px rgba(51,65,84,.4);
+                }
+            }
+        }
+        .tile-body {
+            padding-left: 1em;
+            padding-bottom: 1em;
+
+            .tile-name {
+                font-size: 0.8rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $brand-primary;
+                line-height: 1.2em;
+                margin: 0;
+            }
+
+            .tile-title {
+                font-size: 0.875rem;
+                line-height: 1.4em;
+                margin: 0;
+            }
+
+            .tile-location {
+                margin-top: .5em;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+
+    /* Dentist Tiles */
+    .our-dentists-container {
+
+        .dentist-tile {
+            width: 45%;
+            margin-right: 1.2em;
+        }
+    }
+            
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+
+    /* Dentist Tiles */
+    .our-dentists-container {
+        justify-content: flex-start;
+
+        .dentist-tile {
+            width: 30%;
+            justify-content: flex-start;
+        }
+    }
+            
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 75em) {
+
+    /* Dentist Tiles */
+    .our-dentists-container {
+        .dentist-tile {
+            margin-right: 1.5em;
+        }
+    }
+            
+}

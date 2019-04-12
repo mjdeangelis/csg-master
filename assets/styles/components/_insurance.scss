@@ -1,0 +1,59 @@
+body:not(.home) .main {
+    .accepted-insurance-list {
+        h2 {
+            font-size: 1rem;
+            font-weight: normal;
+            color: rgba(50, 54, 57, .64);
+            line-height: 1.75em;
+            margin-bottom: 1.75em;
+        }
+
+        p.list-header {
+            font-size: 2rem;
+            color: rgba(50, 54, 57, .64);
+            margin-bottom: .15em;
+            line-height: 1em;
+        }   
+
+        ul {
+            margin-top: 0;
+            margin-left: 0;
+            padding-left: 16px;
+
+            li {
+                margin: .55em 0;
+                // font-size: 1.125rem;
+                font-size: 1rem;
+                line-height: 1.55em;
+                color: #323639;
+
+                a {
+                    margin: .55em 0;
+                    font-size: 1.125rem;
+                    line-height: 1.55em;
+                    color: #323639;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+
+    body:not(.home) .main {
+        .accepted-insurance-list {
+    
+            ul {
+                li {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+
+}

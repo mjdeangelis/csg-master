@@ -1,0 +1,708 @@
+html { 
+	font-size: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	overflow-x: hidden;
+
+/* Home page styles */
+	&.home {
+		.wrap.container {
+			margin: 0;
+			padding: 0 !important;
+			width: 100%;
+
+			.content.row {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+
+				.main {
+					margin: 0;
+					padding: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	/* Full width template styles */
+	.main {
+		.fullwidth-header {
+			text-align: center;
+		}
+		.fullwidth-container {
+			ul li {
+				&:before {
+					display: none !important;
+				}
+			}
+		}
+	}
+	
+
+	/* Page Specific Styles */
+	&:not(.home) {
+		overflow-x: hidden;
+
+		.wrap.container {
+			padding: 1em !important;
+			overflow-x: hidden;
+			// z-index: -2;
+		}
+
+		.main {
+
+			h1 {
+				margin-bottom: 0.75em;
+			}
+
+			p {
+				line-height: 1.75em;
+				margin: .5em 0 2em;
+			}
+
+			h2 {
+				margin-bottom: 0.75em;
+			}
+
+			h3 {
+				margin-bottom: 0em;
+			}
+
+			ul {
+				margin: 2em 0;
+			}
+			ul li {
+			    font-size: 1rem;
+			    line-height: 1.6em;
+			    color: $body;
+			    list-style: none;
+			    position: relative;
+				text-align: left;
+			    ul {
+			    	margin: 1em 0;
+			    	li:before {
+			    		content: "\f1db";
+			    		font-size: .5rem;
+			    	}
+			    }
+			}
+
+			ul li:before {
+				font-family: FontAwesome;
+			    color: $brand-primary;
+			    content: "\2022";
+			    display: inline-block;
+			    font-size: 1.5rem;
+			    position: absolute;
+			    left: -15px;
+			    top: -1px;
+			}
+
+			.social-icons {
+				li:before {
+					content: none;
+				}
+			}
+
+			ol {
+			    counter-reset: item;
+			    margin: 2em 0;
+			}
+
+			ol li {
+			    font-size: 1rem;
+			    line-height: 1.6em;
+			    display: block;
+			    color: $body;
+			    list-style: none;
+			    margin: .25em 0;
+			}
+
+			ol li:before {
+			    color: $brand-primary;
+			    content: counter(item) ". ";
+			    counter-increment: item;
+			    font-family: 'Open Sans', arial, sans-serif;
+			    font-size: 1rem;
+			    display: inline-block;
+			    position: relative;
+			    font-weight: 700;
+			    width: 0;
+			    top: 0;
+			    left: -20px;
+			}
+
+			.dentist-image {
+				width: 100%;
+				margin-bottom: 2em;
+			}
+			.dentist-name {
+				font-size: 1.5rem;
+				margin-bottom: 0;
+			}
+			.dentist-title {
+				font-weight: 600;
+				margin-bottom: 2em;
+			}
+
+
+		}
+		
+	}
+
+}
+
+p {
+	color: $body;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.75em;
+	margin: 1em 0;
+}
+
+h1 {
+	color: $header;
+	// font-size: 3.5rem;
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.2em;
+	margin-bottom: .33em;
+	opacity: .87;
+}
+
+h2 {
+	color: $header;
+	// font-size: 3rem;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.27em;
+	opacity: .87;
+}	
+
+h3 {
+	color: $header;
+	// font-size: 3rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.25em;
+	letter-spacing: .02em;
+	opacity: .87;
+}
+
+a {
+	color: $brand-primary;
+
+	&:hover {
+		color: $brand-primary;
+	}
+}
+
+/* Social Icons */
+.social-icons {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	width: 50%;
+	margin: 2em auto 1em;
+
+	li {
+		display: inline-block;
+		text-align: center;
+		width: 33%;
+		opacity: 1;
+
+		a {
+			color: $brand-secondary;
+			opacity: 1;
+
+			.fa {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/* Recaptcha Badge */
+
+.grecaptcha-badge {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+div.wpcf7-spam-blocked {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+/* Practice Map */
+.practice-map {
+	height: 450px;
+    width: 100%;
+}
+/* Locations Map */
+#locationsMap {
+	height: 600px;
+    width: 100%;
+}
+/* Office Map */
+#practiceMap {
+    height: 450px;
+    width: 100%;
+
+    .map-office-title {
+    	margin-bottom: 0;
+    	line-height: 1.5em;
+    }
+}
+#practiceInfo {
+	background-color: #fff;
+	margin: 10px;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    border-radius: 2px;
+
+	p {
+		color: $body-heading;
+		opacity: .87;
+		margin: 0;
+		line-height: 1.5em;
+
+		&.address {
+			font-size: .75rem;
+			margin-bottom: 1em;
+		}
+	}
+
+	.fa {
+		color: $brand-secondary;
+	}
+
+	a {
+		color: $brand-secondary;
+
+		&:hover {
+			color: $brand-secondary;
+		}
+	}
+
+	.directions {
+		display: inline-block;
+		float: right;		
+	}
+}
+
+/* Fixed CTA */
+#fixed-cta {
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 1em .5em;
+	text-align: center;
+	background-color: $btn-fixed-bg;
+	z-index: 5;
+
+	.fa-calendar {
+		color: white;
+	}
+	.cta-text {
+		text-transform: uppercase;
+		color: $btn-fixed-cta;
+		font-weight: 700;
+		font-size: 0.875rem;
+		letter-spacing: 0.08em;
+		margin-left: .5em;
+	}
+}
+
+/* Fixed Mobile Call Button */
+.fixed-call {
+	display: block;
+    position: fixed;
+    text-decoration: none;
+    z-index: 50;
+	background-color: $brand-secondary;
+	border-radius: 50%;
+	height: 65px;
+	width: 65px;
+	display: flex;
+	align-items: center;
+	bottom: 15px;
+	right: 20px;
+	box-shadow: 0 6px 20px 0 rgba(73,73,73,.33);
+	border: 2px solid #fff;
+
+	.fa {
+		color: #fff;
+		display: block;
+		font-size: 45px;
+		margin: 3px auto 0;
+	}
+
+	&:hover {
+		text-decoration: none;
+		outline: 0;
+	}
+}
+
+/* Hero Section */
+#hero {
+	// padding: 2em .5em;
+	padding: 2em 0em;
+    position: relative;
+	// background-image: url('../images/hero-background@2x-min.jpg');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    	.container {
+    		padding: 0;
+    		.row {
+    			margin: 0;
+    		}
+    		.col-12 {
+    			padding: 0;
+    		}
+    	}
+    	.hero-container {
+    		text-align: center;
+
+	    	.hero-headline {
+	    		font-size: 2.5rem;
+	    		padding-left: .5em;
+	    		padding-right: .5em;
+	    	}
+
+	    	.hero-subhead {
+	    		padding-left: 2em;
+	    		padding-right: 2em;
+	    		margin-top: 1em;
+	    		margin-bottom: .25em;
+	    	}
+
+	    	.hero-author {
+	    		font-weight: 600;
+	    		font-size: 0.75rem;
+	    		margin: 0 0 2em;
+	    	}
+
+	    	.hero-stars {
+	    		margin-top: 1em;
+	    		.fa-star {
+	    			color: #FAC947;
+	    			font-size: 25px;
+	    		}
+	    	}
+
+	    	.mobile-hero-image {
+	    		margin: 0 -15px;
+	    	}
+	    }
+    
+}
+
+/* Value Prop Section */
+#value-prop {
+	background-color: $value-prop-background;
+	color: #fff;
+	text-align: center;
+
+	.value-prop-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 2em .5em 1em;
+		width: 100%;
+
+		.value-prop-box {
+			// width: 33.33%;
+			width: 50%;
+			position: relative;
+			padding: .5em .25em;
+
+			.value-prop-title {
+				color: #fff;
+				// font-size: 1.15rem; 
+				font-size: .875rem;
+				font-weight: 600;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				display: inline-block;
+				left: 50%;
+				top: -25px;
+				margin-left: -25px;
+				height: 50px;
+				width: 50px;
+				background-image: url('../images/check-circle@2x-min.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+/* Features Section */
+#features {
+	text-align: center;
+	padding: 2em .5em;
+
+	.features-container {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		.feature-box {
+			margin: 2em auto;
+			width: 100%;
+
+			img {
+				width: auto;
+				height: 48px;
+			}
+			.feature-title {
+				color: $body-heading;
+				font-size: 0.875rem;
+				font-weight: 600;
+				line-height: 1.35em;
+				margin: 1.3em auto .6em;
+			}
+
+			p {
+				color: $body;
+				font-size: 0.75rem;
+				line-height: 2em;
+				margin: 0 auto 1.8em;
+			}
+
+			a {
+				color: $body-link;
+				font-size: 0.75rem;
+				font-weight: 700;
+				line-height: 1.2em;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding-bottom: .25em;
+				border-bottom: 1px dotted $body-link;
+			}
+
+			a:hover {
+				text-decoration: none;
+				border-bottom: 1px solid $body-link;
+			}
+
+		}
+
+	}
+}
+
+/* Office About Section */
+#office-info {
+	background-color: $section-offset;
+	padding: 2em .5em;
+	text-align: center;
+
+	.office-about {
+
+		p {
+			margin-bottom: 3em;
+		}
+
+		.office-images {
+			margin-top: 2em;
+		}
+	}
+
+	.office-offers {
+		margin-top: 5em;
+
+		.row {
+
+			.offers-container {
+				display: flex;
+				flex-direction: column;
+				margin-top: 2em;
+
+				.offer {
+					margin: 2em 0;
+
+					.offer-feature-image {
+						box-shadow: 0 15px 30px 0 rgba(0,0,0,.15);
+					}
+					.offer-logo {
+						display: block;
+						margin: 2em auto 1em;
+    					width: 50%;
+					}
+
+					h4 {
+						font-size: 1.5rem;
+						font-weight: 400;
+						line-height: 1em;
+						margin: 2em auto 1em;
+					}
+					p {
+						margin-bottom: 3em;
+					}
+				}
+
+			}
+
+			.offer-disclaimer {
+				font-size: 0.875rem;
+				font-weight: 300;
+				margin-top: 2em;
+				line-height: 1.7em;
+				opacity: .64;
+			}
+
+		}
+	}
+
+}
+
+/* Meet the Dentist Section */
+#meet-the-dentists {
+	padding: 2em .5em;
+	text-align: center;
+
+	.dentists-container {
+		width: 100%;
+
+		.dentist-box {
+			box-shadow: 0 5px 30px 0 rgba(0,0,0,.15);
+			padding: 2em;
+			margin-top: 2em;
+			position: relative;
+
+			.dentist-name {
+				color: $brand-primary;
+				font-size: 1.25rem;
+				font-weight: 600;
+			}
+			.dentist-title {
+				color: $header;
+				opacity: .87;
+				font-size: 0.875rem;
+				font-weight: 600;
+				margin-bottom: 2em;
+			}
+			p {
+				font-size: 0.875rem;
+				line-height: 1.7em;
+			}
+
+			a {
+				color: $body-link;
+				font-size: 0.75rem;
+				font-weight: 700;
+				line-height: 1.2em;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding-bottom: .25em;
+				border-bottom: 1px dotted $body-link;
+			}
+
+			a:hover {
+				text-decoration: none;
+				border-bottom: 1px solid $body-link;
+			}
+
+			&.withImage {
+				text-align: left;
+
+				.dentist-name {
+					width: 100%;
+				}
+
+				.dentist-title {
+					width: 100%;
+				}
+
+				p {
+					width: 50%;
+				}
+
+				a {
+					width: 50%;
+				}
+
+				img {
+					width: 60%;
+					float: right;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+			}
+		}
+
+		&.byTwo {
+			.dentist-box {
+				// width: 100%;
+			}
+		}
+	}
+}
+
+/* Insurance Section */
+#insurance {
+	padding: 2em .5em;
+	text-align: center;
+
+	.insurance-accepted-container {
+		display: flex;
+		flex-wrap: wrap;
+
+		.insurance-box {
+			width: 50%;
+			padding: .5em 1em;
+		}
+
+	}
+
+	.btn-dark {
+		margin-top: 3.75em;
+	}
+
+	.insurance-info {
+		font-size: 0.875rem;
+		font-weight: 300;
+		margin-top: 1em;
+		line-height: 1.7em;
+		opacity: .64;
+	}
+
+}
+
+/* Contact Us Section */
+#contact-us {
+	background-color: $section-offset;
+	padding: 2em .5em;
+	text-align: center;
+
+}
+
+/* Pop up styles */
+.pum-theme-410 .pum-container, .pum-container { border-radius: 25px !important; padding: 20px 30px 15px !important; }
+.pum-theme-410, .pum-theme-default-theme {
+    background-color: rgba( 0, 0, 0, 0.7 ) !important;
+}
+
+.pum-theme-410 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close { color: #000 !important; background-color: transparent !important; font-size: 1em; margin-top: 10px; margin-right: 10px; outline: 0; }
+
+::-webkit-input-placeholder { font-style: italic; color: #427080; opacity: 0.6; vertical-align: middle }
+::-moz-placeholder { font-style: italic; color: #427080; opacity: 0.6; vertical-align: middle }
+:-moz-placeholder { font-style: italic; color: #427080; opacity: 0.6; vertical-align: middle }
+:-ms-input-placeholder { font-style: italic; color: #427080; opacity: 0.6; vertical-align: middle }
